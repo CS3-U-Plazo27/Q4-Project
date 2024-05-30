@@ -208,11 +208,12 @@
             if(password == passcheck){
                 alert("You are now logged in");
 		document.getElementById("userInfo").style.display = "block";
-		document.getElementById("p1").innerHTML = "Name : " + personame.value;
-		document.getElementById("p2").innerHTML = "UserName : " + namecheck.value;
-		document.getElementById("p3").innerHTML = "Password : " + passcheck.value;
-		document.getElementById("p4").innerHTML = "Gender : " + gender.value;
-		document.getElementById("p5").innerHTML = "Email : " + email.value;
+		document.getElementById("p1").innerHTML = "Name : " + personame;
+		document.getElementById("p2").innerHTML = "UserName : " + namecheck;
+		document.getElementById("p3").innerHTML = "Password : " + passcheck;
+		document.getElementById("p4").innerHTML = "Gender : " + gender;
+		document.getElementById("p5").innerHTML = "Email : " + email;
+		localStorage.setItem("status", "Logged in");
                 return false;
             }
             else{
