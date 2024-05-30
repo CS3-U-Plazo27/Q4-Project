@@ -173,13 +173,13 @@
         element.style.borderColor = "green";
     }
     function record(){
+	window.localStorage
         if(document.getElementById("pWord").value == document.getElementById("cpWord").value){
-        document.cookie = "expires=Sun, 5 May 2030 12:00:00 UTC; path=/";
-        document.cookie = "Name =" + document.getElementById("name").value;
-        document.cookie =  "Username =" + document.getElementById("uName").value;
-        document.cookie =  "Password =" + document.getElementById("pWord").value;
-        document.cookie =  "Gender =" + document.getElementById("gender").value;
-        document.cookie =  "Email =" + document.getElementById("email").value;
+        localStorage.setItem("name", document.getElementById("name").value;
+	localStorage.setItem("username", document.getElementById("uName").value);
+	localStorage.setItem("password", document.getElementById("password").value);
+	localStorage.setItem("gender", document.getElementById("gender").value);
+	localStorage.setItem("email", document.getElementById("email").value);
         alert("Please go to the login page to log in your account!")
         }
         else{
