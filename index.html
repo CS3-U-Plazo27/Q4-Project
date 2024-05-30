@@ -239,9 +239,10 @@
 	window.location.href = "LearnMore.html";
     }
     function checking(){
+	window.localStorage;
 	let status = localStorage.getItem("status").value;
 	let name = localStorage.getItem("name").value;
-	if(status == "Loggedin"){
+	if(status == "Logged in"){
 		document.getElementById("header").innerHTML = "Hello! " + name + " Thank you for registering!";
 		document.getElementById("message").innerHTML = "Lets learn Computational Physics Together!";
 	}
