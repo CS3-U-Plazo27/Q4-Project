@@ -204,7 +204,11 @@
         if( name == namecheck){
             if(pass == passcheck){
                 alert("You are now logged in");
-		
+		document.getElementById("p1").innerhtml = "Name : " + localStorage.getItem("name");
+		document.getElementById("p2").innerhtml = "UserName : " + localStorage.getItem("username");
+		document.getElementById("p3").innerhtml = "Password : " + localStorage.getItem("password");
+		document.getElementById("p4").innerhtml = "Gender : " + localStorage.getItem("gender");
+		document.getElementById("p5").innerhtml = "Email : " + localStorage.getItem("email");
                 return false;
             }
             else{
