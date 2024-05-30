@@ -201,14 +201,17 @@
 	let password = document.getElementById("uName").value;
 	let namecheck = localStorage.getItem("username");
 	let passcheck = localStorage.getItem("password");
+	let personame = localStorage.getItem("name");
+	let gender = localStorage.getItem("gender");
+	let email = localStorage.getItem("email");
         if( name == namecheck){
             if(pass == passcheck){
                 alert("You are now logged in");
-		document.getElementById("p1").innerhtml = "Name : " + localStorage.getItem("name");
-		document.getElementById("p2").innerhtml = "UserName : " + localStorage.getItem("username");
-		document.getElementById("p3").innerhtml = "Password : " + localStorage.getItem("password");
-		document.getElementById("p4").innerhtml = "Gender : " + localStorage.getItem("gender");
-		document.getElementById("p5").innerhtml = "Email : " + localStorage.getItem("email");
+		document.getElementById("p1").innerhtml = "Name : " + personame;
+		document.getElementById("p2").innerhtml = "UserName : " + namecheck;
+		document.getElementById("p3").innerhtml = "Password : " + passcheck;
+		document.getElementById("p4").innerhtml = "Gender : " + gender;
+		document.getElementById("p5").innerhtml = "Email : " + email;
                 return false;
             }
             else{
