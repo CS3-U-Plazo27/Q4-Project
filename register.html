@@ -174,12 +174,17 @@
     }
     function record(){
 	window.localStorage;
+	let name = document.getElementById("name").value;
+	let uname = document.getElementById("uName").value;
+	let pword = document.getElementById("pWord").value;
+	let gender = document.getElementById("gender").value;
+	let email = document.getElementById("email").value;
         if(document.getElementById("pWord").value == document.getElementById("cpWord").value){
-        localStorage.setItem("name", document.getElementById("name").value);
-	localStorage.setItem("username", document.getElementById("uName").value);
-	localStorage.setItem("password", document.getElementById("pWord").value);
-	localStorage.setItem("gender", document.getElementById("gender").value);
-	localStorage.setItem("email", document.getElementById("email").value);
+        localStorage.setItem("name",name);
+	localStorage.setItem("username", uname);
+	localStorage.setItem("password", pword);
+	localStorage.setItem("gender", gender);
+	localStorage.setItem("email", email);
         alert("Please go to the login page to log in your account!");
         }
         else{
