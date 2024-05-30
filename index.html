@@ -232,9 +232,6 @@
 	function login(){
         window.location.href = "Login.html";
     }
-    function register(){
-        window.location.href = "register.html";
-    }
     function learn(){
 	window.location.href = "LearnMore.html";
     }
@@ -245,12 +242,25 @@
 	if(status == "Logged in"){
 		document.getElementById("header").innerHTML = "Hello! " + name + " Thank you for registering!";
 		document.getElementById("message").innerHTML = "Lets learn Computational Physics Together!";
+		document.getElementById("login").style.display = "none";
+		document.getElementById("register").innerHTML = "Log Out";
 	}
 	else{
 		return false;
 	}
     }
 	  checking();
+	function register(){
+	window.localStorage;
+	let status = localStorage.getItem("status");
+	if(status == "Logged in"){
+		localStorage.clear();
+		checking();
+	}
+	else{
+		window.location.href = "register.html";
+	}
+    }
   </script>
     
 </html>
