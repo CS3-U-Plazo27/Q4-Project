@@ -240,7 +240,7 @@
     }
     function checking(){
 	let status = localStorage.getItem("status").value;
-	let name = document.getElementById("uName").value;
+	let name = localStorage.getItem("name").value;
 	if(status == "Logged in"){
 		document.getElementById("header").innerHTML = "Hello! " + name + " Thank you for registering!";
 		document.getElementById("message").innerHTML = "Lets learn Computational Physics Together!";
