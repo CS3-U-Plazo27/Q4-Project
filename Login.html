@@ -196,23 +196,15 @@
         element.style.borderColor = "green";
     }
     function checking(){
-        document.cookie =  "Username2 =" + document.getElementById("uName").value;
-        document.cookie =  "Password2 =" + document.getElementById("pWord").value;
-        var cookie = document.cookie.split(";");
-        cookie.sort();
-        cookie[4]= cookie[4].slice(10, cookie[4].length);
-        cookie[2]= cookie[2].slice(10, cookie[2].length);
-        cookie[5]= cookie[5].slice(9, cookie[5].length);
-        cookie[3]= cookie[3].slice(9, cookie[3].length);
-        if(cookie[4] == cookie[5]){
-            if(cookie[2] == cookie[3]){
+        window.localStorage;
+	let name = document.getElementById("uName").value;
+	let password = document.getElementById("uName").value;
+	let namecheck = localStorage.getItem("username");
+	let passcheck = localStorage.getItem("password");
+        if( name == namecheck){
+            if(pass == passcheck){
                 alert("You are now logged in");
-		document.getElementById("userInfo").style.display = "block";
-                document.getElementById("p1").innerHTML = cookie[7];
-                document.getElementById("p2").innerHTML = "Username=" + cookie[4];
-                document.getElementById("p3").innerHTML = cookie[1];
-                document.getElementById("p4").innerHTML = cookie[0];
-                document.getElementById("p5").innerHTML ="Password=" + cookie[2];
+		
                 return false;
             }
             else{
