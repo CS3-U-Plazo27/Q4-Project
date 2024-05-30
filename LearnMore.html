@@ -175,8 +175,32 @@
 	function login(){
         window.location.href = "Login.html";
     }
-    function register(){
-        window.location.href = "register.html";
+    function learn(){
+	window.location.href = "LearnMore.html";
+    }
+    function checking(){
+	window.localStorage;
+	let status = localStorage.getItem("status");
+	if(status == "Logged in"){
+		document.getElementById("login").style.display = "none";
+		document.getElementById("register").innerHTML = "Log Out";
+	}
+	else{
+		return false;
+	}
+    }
+	  checking();
+	function register(){
+	window.localStorage;
+	let status = localStorage.getItem("status");
+	if(status == "Logged in"){
+		localStorage.clear();
+		document.getElementById("login").style.display = "inline";
+		document.getElementById("register").innerHTML = "Register";
+	}
+	else{
+		window.location.href = "register.html";
+	}
     }
     var x = 0
     function swap(){
