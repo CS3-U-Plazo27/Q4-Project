@@ -255,7 +255,10 @@
 	let status = localStorage.getItem("status");
 	if(status == "Logged in"){
 		localStorage.clear();
-		checking();
+		document.getElementById("header").innerHTML = "Explore Computational Physics";
+		document.getElementById("message").innerHTML = "Using computational methods to solve physical problems.";
+		document.getElementById("login").style.display = "inline";
+		document.getElementById("register").innerHTML = "Register";
 	}
 	else{
 		window.location.href = "register.html";
