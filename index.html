@@ -204,8 +204,8 @@
             </nav>
         </header>
         <div id="div2">
-            <section>Explore Computational Physics</section>
-            <p>Using computational methods to solve physical problems.</p>
+            <section id ="header">Explore Computational Physics</section>
+            <p id="message">Using computational methods to solve physical problems.</p>
             <div id="startToLearn">
                 <button onclick="register()" id="started">Get Started</button>
                 <button onclick="learn()" id="more">Learn More</button>
@@ -238,6 +238,18 @@
     function learn(){
 	window.location.href = "LearnMore.html";
     }
+    function checking(){
+	let status = localStorage.getItem("status").value;
+	let name = document.getElementById("uName").value;
+	if(status == "Logged in"){
+		document.getElementById("header").innerHTML = "Hello! " + name + " Thank you for registering!";
+		document.getElementById("message").innerHTML = "Lets learn Computational Physics Together!";
+	}
+	else{
+		return false;
+	}
+    }
+	  checking();
   </script>
     
 </html>
