@@ -198,14 +198,14 @@
     function checking(){
         window.localStorage;
 	let name = document.getElementById("uName").value;
-	let password = document.getElementById("uName").value;
+	let password = document.getElementById("pWord").value;
 	let namecheck = localStorage.getItem("username");
 	let passcheck = localStorage.getItem("password");
 	let personame = localStorage.getItem("name");
 	let gender = localStorage.getItem("gender");
 	let email = localStorage.getItem("email");
         if( name == namecheck){
-            if(pass == passcheck){
+            if(password == passcheck){
                 alert("You are now logged in");
 		document.getElementById("p1").innerhtml = "Name : " + personame;
 		document.getElementById("p2").innerhtml = "UserName : " + namecheck;
